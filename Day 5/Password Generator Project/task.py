@@ -31,4 +31,4 @@ password = ""
 for character in new_list:
     password += character
 
-print("Your new password is: " + password)
+print(f"Your new password is: {password}")
