@@ -18,11 +18,11 @@ for number in range(1, 101):
         print(number)
 
 
-glass1 = "milk"
-glass2 = "juice"
-glass3 = glass1
-glass1 = glass2
-glass2 = glass3
-
-print(glass1)
-print(glass2)
+# glass1 = "milk"
+# glass2 = "juice"
+# glass3 = glass1
+# glass1 = glass2
+# glass2 = glass3
+#
+# print(glass1)
+# print(glass2)
