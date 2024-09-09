@@ -42,7 +42,9 @@ while True:
         print(f"{first_number} {math_op} {second_number} = {result}")
 
     keep_going = input("would you like to continue? (yes/no)\n").lower()
-    if keep_going != "yes":
+    if keep_going == "yes":
         break
+    """Learn about function recursions here"""
 
 print("Thank you for using the calculator, goodbye!")
+
