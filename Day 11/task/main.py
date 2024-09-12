@@ -1,5 +1,8 @@
-#create a flowchart
-#try solving without hints
+#ace handling
+#improve dealer card drawing logic
+#debug player hit or stand flow
+#simplify dealer win/loss condition
+#prevent redundancy
 
 import random
 
@@ -48,7 +51,8 @@ if game_start == "y":
                 else:
                     print(f"Dealer's hand: {dealer_hand}, Dealer's current score: {dealer_current_score}, dealer bust.")
         else:
-            print(f"Dealer hits again. Dealer's hand: {dealer_hand}, Dealer's current score: {dealer_current_score}")
+            print("test1")
+            #print(f"Dealer hits again. Dealer's hand: {dealer_hand}, Dealer's current score: {dealer_current_score}")
 
     if hit_or_stand == "n":
         if current_score > dealer_current_score:
@@ -62,8 +66,7 @@ if game_start == "y":
         #     print(f"Your score is {current_score}. Dealer's score is: {dealer_current_score}. {compare_scores} wins!")
 
     if current_score <= 21:
-        hit_or_stand = input("Type 'Y' to Hit and 'N' to Stand\n").lower()
-
+        # hit_or_stand = input("Type 'Y' to Hit and 'N' to Stand\n").lower()
         if hit_or_stand == "y":
             second_round = random.choices(cards, k=1)
             print(f"The dealer deals you a {second_round}.")
