@@ -29,6 +29,11 @@ if game_start == "y":
     dealer_current_score = sum(dealer_hand)
     print(f"Dealer's hand: {dealer_hand}, Dealer's current score: {dealer_current_score}")
 
+    hit_or_stand = input("Type 'Y' to Hit and 'N' to Stand\n").lower()
+
+    if hit_or_stand == "n":
+        print(f"Your score is {current_score}.")
+        print("Dealer's hand is: X")
 
     if current_score <= 21:
         hit_or_stand = input("Type 'Y' to Hit and 'N' to Stand\n").lower()
@@ -57,11 +62,11 @@ if game_start == "y":
             print(f"Your score is {current_score}.")
             print("Dealer's hand is: X")
 
-    elif current_score == 21:
+    if current_score == 21:
         print(f"Your cards: {hand}, your current score: {current_score}")
         print("Dealer's hand is: X")
         print(f"You hit {current_score}, You win!")
-    else:
+    if current_score > 21:
         print(f"Your cards: {hand}, your current score: {current_score}")
         print("Dealer's hand is: X")
         print("You went over 21. Bust, you lose!")
