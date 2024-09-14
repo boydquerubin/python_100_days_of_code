@@ -114,7 +114,6 @@
 # if game_start == "n":
 #     print("Bye, have a wonderful day!")
 
-
 import random
 
 
@@ -131,22 +130,22 @@ def dealer_logic(dealer_hand, dealer_current_score):
         dealer_hand.append(random.choice(cards))
         dealer_current_score = sum(dealer_hand)
         dealer_current_score = handle_ace(dealer_hand, dealer_current_score)
-        print(f"Dealer's hand: {dealer_hand}, Dealer's current score: {dealer_current_score}")
+        print(f"Dealer's hand: {dealer_hand}, Dealer's current score: {dealer_current_score}\n")
     return dealer_current_score
 
 
 def compare_scores(player_score, dealer_score):
     """Determine the winner."""
     if player_score > 21:
-        print("You went over 21. Bust, you lose!")
+        print("You went over 21. Bust, you lose!\n")
     elif dealer_score > 21:
-        print(f"Dealer busts! You win with {player_score}.")
+        print(f"Dealer busts! You win with {player_score}.\n")
     elif player_score > dealer_score:
-        print(f"You win with {player_score} against dealer's {dealer_score}.")
+        print(f"You win with {player_score} against dealer's {dealer_score}.\n")
     elif dealer_score > player_score:
-        print(f"Dealer wins with {dealer_score} against your {player_score}.")
+        print(f"Dealer wins with {dealer_score} against your {player_score}.\n")
     else:
-        print(f"It's a draw! Both have {player_score}.")
+        print(f"It's a draw! Both have {player_score}.\n")
 
 
 game_start = input("Do you want to play Blackjack? Type 'Y' or 'N': ").lower()
@@ -154,43 +153,49 @@ game_start = input("Do you want to play Blackjack? Type 'Y' or 'N': ").lower()
 if game_start == "y":
     print(f"\n" * 20)
 
-    import art
+    while True:
+        import art
 
-    print(art.logo)
+        print(art.logo)
 
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+        cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
-    # Initial setup
-    player_hand = random.choices(cards, k=2)
-    dealer_hand = random.choices(cards, k=2)
+        # Initial setup
+        player_hand = random.choices(cards, k=2)
+        dealer_hand = random.choices(cards, k=2)
 
-    player_score = sum(player_hand)
-    dealer_score = sum(dealer_hand)
+        player_score = sum(player_hand)
+        dealer_score = sum(dealer_hand)
 
-    player_score = handle_ace(player_hand, player_score)
-    dealer_score = handle_ace(dealer_hand, dealer_score)
+        player_score = handle_ace(player_hand, player_score)
+        dealer_score = handle_ace(dealer_hand, dealer_score)
 
-    print(f"Your cards: {player_hand}, current score: {player_score}")
-    print(f"Dealer's first card: {dealer_hand[0]}")
+        print(f"Your cards: {player_hand}, current score: {player_score}\n")
+        print(f"Dealer's first card: {dealer_hand[0]}\n")
 
-    # Player's hit or stand loop
-    while player_score < 21:
-        hit_or_stand = input("Type 'Y' to Hit or 'N' to Stand: ").lower()
-        if hit_or_stand == 'y':
-            player_hand.append(random.choice(cards))
-            player_score = sum(player_hand)
-            player_score = handle_ace(player_hand, player_score)
-            print(f"Your cards: {player_hand}, current score: {player_score}")
-        else:
+        # Player's hit or stand loop
+        while player_score < 21:
+            hit_or_stand = input("Type 'Y' to Hit or 'N' to Stand: ").lower()
+            if hit_or_stand == 'y':
+                player_hand.append(random.choice(cards))
+                player_score = sum(player_hand)
+                player_score = handle_ace(player_hand, player_score)
+                print(f"Your cards: {player_hand}, current score: {player_score}\n")
+            else:
+                break
+
+        # Dealer logic (dealer must hit until >= 17)
+        if player_score <= 21:
+            dealer_score = dealer_logic(dealer_hand, dealer_score)
+
+        # Compare scores and determine the result
+        print(f"Dealer's final hand: {dealer_hand}, final score: {dealer_score}\n")
+        compare_scores(player_score, dealer_score)
+
+        keep_going = input("Would you like to keep playing? Type 'Y' or 'N': ").lower()
+        if keep_going == "n":
+            print("Bye, have a wonderful day!")
             break
-
-    # Dealer logic (dealer must hit until >= 17)
-    if player_score <= 21:
-        dealer_score = dealer_logic(dealer_hand, dealer_score)
-
-    # Compare scores and determine the result
-    print(f"Dealer's final hand: {dealer_hand}, final score: {dealer_score}")
-    compare_scores(player_score, dealer_score)
 
 elif game_start == "n":
     print("Bye, have a wonderful day!")
