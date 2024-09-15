@@ -1,8 +1,8 @@
-# #ace handling
-# #improve dealer card drawing logic
-# #debug player hit or stand flow
-# #simplify dealer win/loss condition
-# #prevent redundancy
+#ace handling
+#improve dealer card drawing logic
+#debug player hit or stand flow
+#simplify dealer win/loss condition
+#prevent redundancy
 #
 # import random
 #
