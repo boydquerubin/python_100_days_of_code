@@ -19,10 +19,7 @@
 #     #Computer thinks Ace is only 11
 #     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 #
-#     00000
-#
-#
-#     ha0000nd = [] #empty array to show hand?
+#     hand = [] #empty array to show hand?
 #     dealer_hand = []
 #
 #     first_round = random.choices(cards, k=2)
