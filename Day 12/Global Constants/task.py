@@ -1,6 +1,6 @@
 # GLobal Constants
 
-# need to continue
+# need to continue, it's my birthday
 
 PI = 3.14159
 
