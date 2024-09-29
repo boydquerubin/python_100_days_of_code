@@ -1,6 +1,6 @@
 # GLobal Constants
 
-# need to continue, it's my birthday
+# write global constants with UPPERCASE so you know not to change it
 
 PI = 3.14159
 
