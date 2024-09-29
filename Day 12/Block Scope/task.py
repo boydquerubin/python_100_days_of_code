@@ -10,3 +10,15 @@ def create_enemy():
     print(new_enemy)
 
 create_enemy()
+
+# prime number checker
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
+
+is_prime(73)
