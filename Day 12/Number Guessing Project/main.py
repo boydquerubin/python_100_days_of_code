@@ -17,7 +17,12 @@ attempts = 10
 
 if difficulty == "easy":
     print(f"You have {attempts} attempts remaining to guess the number.")
-    attempt1 = input("Make a guess: ")
+    attempt1 = int(input("Make a guess: "))
+    if attempt1 > number:
+        print("Too high.\nGuess again.")
+        attempts -= 1
+        print(f"You have {attempts} attempts remaining to guess the number.")
+        # is there a way to make this more concise?
 
 if difficulty == "hard":
     attempts = 5
