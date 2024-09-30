@@ -18,17 +18,18 @@ attempts = 10
 if difficulty == "easy":
     print(f"You have {attempts} attempts remaining to guess the number.")
     attempt1 = int(input("Make a guess: "))
-    # while loop here? How do i shorten this code?
+    # while loop here? How do I shorten this code?
     if attempt1 > number:
         print("Too high.\nGuess again.")
         attempts -= 1
         print(f"You have {attempts} attempts remaining to guess the number.")
-        attempt2 = int(input("Make a guess: "))
-        if attempt2 > number:
-            print("Too high.\nGuess again.")
-            attempts -= 1
-            print(f"You have {attempts} attempts remaining to guess the number.")
-            attempt2 = int(input("Make a guess: "))
+
+        # attempt2 = int(input("Make a guess: "))
+        # if attempt2 > number:
+        #     print("Too high.\nGuess again.")
+        #     attempts -= 1
+        #     print(f"You have {attempts} attempts remaining to guess the number.")
+        #     attempt2 = int(input("Make a guess: "))
 
 
 
