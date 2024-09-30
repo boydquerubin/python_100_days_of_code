@@ -18,17 +18,27 @@ attempts = 10
 if difficulty == "easy":
     print(f"You have {attempts} attempts remaining to guess the number.")
     attempt1 = int(input("Make a guess: "))
-    # while loop here?
-    # while attempt1 > number:
-    #     print("Too high.\nGuess again.")
-    #     attempts -= 1
-    #     print(f"You have {attempts} attempts remaining to guess the number.")
-
+    # while loop here? How do i shorten this code?
     if attempt1 > number:
         print("Too high.\nGuess again.")
         attempts -= 1
         print(f"You have {attempts} attempts remaining to guess the number.")
-        is there a way to make this more concise?
+        attempt2 = int(input("Make a guess: "))
+        if attempt2 > number:
+            print("Too high.\nGuess again.")
+            attempts -= 1
+            print(f"You have {attempts} attempts remaining to guess the number.")
+            attempt2 = int(input("Make a guess: "))
+
+
+
+        if attempts == 0:
+
+    # if attempt1 > number:
+    #     print("Too high.\nGuess again.")
+    #     attempts -= 1
+    #     print(f"You have {attempts} attempts remaining to guess the number.")
+    #     is there a way to make this more concise?
 
 if difficulty == "hard":
     attempts = 5
