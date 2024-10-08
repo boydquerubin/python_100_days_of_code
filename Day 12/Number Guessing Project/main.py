@@ -40,6 +40,7 @@ if difficulty == "easy":
     #     attempts -= 1
     #     print(f"You have {attempts} attempts remaining to guess the number.")
     #     is there a way to make this more concise?
+    # when am i going to finish this?
 
 if difficulty == "hard":
     attempts = 5
