@@ -46,3 +46,6 @@ if difficulty == "hard":
     attempts = 5
     print(f"You have {attempts} attempts remaining to guess the number.")
     input("Make a guess: ")
+
+def my_function():
+    print("create new function")
