@@ -49,3 +49,6 @@ if difficulty == "hard":
 
 def my_function():
     print("create new function")
+
+def new_code():
+    print("new code here")
