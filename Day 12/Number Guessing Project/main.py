@@ -55,3 +55,4 @@ def new_code():
     print("new code here")
 
 print("need to learn algorithms")
+print("wow still nothing")
