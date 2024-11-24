@@ -48,11 +48,7 @@ if difficulty == "hard":
     print(f"You have {attempts} attempts remaining to guess the number.")
     input("Make a guess: ")
 
-def my_function():
-    print("create new function")
+def my_function(num1, num2):
+    num1 + num2
 
-def new_code():
-    print("new code here")
-
-print("need to learn algorithms")
-print("wow still nothing")
+my_function(2, 2)
