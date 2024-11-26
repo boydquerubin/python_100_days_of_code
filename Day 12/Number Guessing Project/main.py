@@ -52,3 +52,8 @@ def my_function(num1, num2):
     num1 + num2
 
 my_function(2, 2)
+
+dictionary = {"fruit": ["apple", "orange", "pear"],
+              "vegetable": ["carrot", "broccoli", "cabbage"]}
+
+print(dictionary["vegetable"][1])
